@@ -10,7 +10,9 @@ object TCalculadora: TTCalculadora
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OldCreateOrder = True
   OnKeyDown = EvKeyDown
+  PixelsPerInch = 96
   TextHeight = 15
   object TEHistorico: TEdit
     AlignWithMargins = True
@@ -28,7 +30,7 @@ object TCalculadora: TTCalculadora
     Font.Style = []
     ParentFont = False
     ReadOnly = True
-    TabOrder = 0
+    TabOrder = 1
     StyleElements = []
   end
   object TEOperacao: TEdit
@@ -39,7 +41,9 @@ object TCalculadora: TTCalculadora
     Height = 23
     Alignment = taRightJustify
     AutoSize = False
-    TabOrder = 1
+    NumbersOnly = True
+    TabOrder = 0
+    OnKeyDown = EvKeyDown
   end
   object BtnPorcentagem: TButton
     Left = 13
@@ -184,7 +188,6 @@ object TCalculadora: TTCalculadora
     Caption = '/'
     TabOrder = 17
     OnClick = EVOperacao
-    OnKeyDown = EvKeyDown
   end
   object BtnMultiplicacao: TButton
     Left = 139
@@ -194,7 +197,6 @@ object TCalculadora: TTCalculadora
     Caption = 'X'
     TabOrder = 18
     OnClick = EVOperacao
-    OnKeyDown = EvKeyDown
   end
   object BtnSubtracao: TButton
     Left = 139
@@ -204,7 +206,6 @@ object TCalculadora: TTCalculadora
     Caption = '-'
     TabOrder = 19
     OnClick = EVOperacao
-    OnKeyDown = EvKeyDown
   end
   object BtnSoma: TButton
     Left = 139
@@ -214,7 +215,6 @@ object TCalculadora: TTCalculadora
     Caption = '+'
     TabOrder = 20
     OnClick = EVOperacao
-    OnKeyDown = EvKeyDown
   end
   object BtnIgual: TButton
     Left = 139

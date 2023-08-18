@@ -222,7 +222,8 @@ begin
   try
     Result := v1 / v2;
   except
-    ShowMessage('Valor não divisivel')
+    ShowMessage('Valor não divisivel');
+    Abort;
   end;
   TEOperacao.SetFocus;
 end;
